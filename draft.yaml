@@ -1,0 +1,8 @@
+models:
+  Speedtest:
+    tested_at: datetime
+    upload: decimal:64,10
+    download: decimal:64,10
+    ping: decimal:64,10
+    result: json nullable
+
