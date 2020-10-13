@@ -1,0 +1,2 @@
+require('alpinejs');
+require('./bootstrap');
