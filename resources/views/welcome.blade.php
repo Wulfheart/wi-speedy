@@ -22,10 +22,10 @@
                 </select>
             </div>
         </div>
-        <div class="min-w-full bg-gray-900 divide-x divide-gray-700 flex flex-row text-gray-100 ">
+        <div class="min-w-full bg-gray-900 divide-y lg:divide-x divide-gray-700 flex flex-col lg:flex-row text-gray-100 ">
             <x-footer-item text="Number of checks" value="100"/>
              <x-footer-item text="Down" value="75 Mbit/s"/>
-            <x-footer-item text="Up" value="12.23 Mbit/s"/>
+            <x-footer-item text="Up" value="12.3 Mbit/s"/>
             <x-footer-item text="Ping" value="33.4 ms"/>
         </div>
     </div>
