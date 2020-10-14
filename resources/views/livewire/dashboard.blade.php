@@ -15,11 +15,46 @@
             @php
                 $uuid = (string) Str::uuid();
             @endphp
-            <div id="{{ $uuid }}" class="flex flex-col-reverse flex-1 h-full sm:bg-gray-200">
+            <div id="{{ $uuid }}" class="flex flex-col-reverse flex-1 h-full bg-gray-200">
                 <div class="" style="height: {{ $entry->y / $max * 100 }}%; background-color: {{ $entry->color }}">
                 </div>
             </div>
-            <div class="hidden sm:block" style="margin-left: 1px; margin-right: 1px;"></div>
+            <div class="" style="margin-left: 1px; margin-right: 1px;"></div>
+            @endforeach
+            
+        </div>
+        <div class="flex flex-row items-end h-1 px-12 mx-auto w-6xl">
+            @php
+            $count = $diagram->entries->count();
+            @endphp
+            @foreach ($diagram->entries as $entry)
+            @php
+                $uuid = (string) Str::uuid();
+            @endphp
+            <div id="{{ $uuid }}" class="flex flex-col-reverse flex-1 h-full ">
+                <div class="relative" style="">
+                    <div class="absolute pl-1 text-xs text-gray-500 truncate border-l-2 border-gray-500">
+                        @switch($loop->index)
+                            @case(0)
+                                {{ $entry->x }}
+                                @break
+                            @case(floor($count / 5))
+                            {{ $entry->x }}
+                                @break
+                            @case(floor($count*2 / 5))
+                            {{ $entry->x }}
+                                @break
+                            @case(floor($count*3 / 5))
+                            {{ $entry->x }}
+                                @break
+                            @case(floor($count*7 / 8))
+                            {{ $entry->x }}
+                                @break
+                        @endswitch
+                    </div>
+                </div>
+            </div>
+            <div class="" style="margin-left: 1px; margin-right: 1px;"></div>
             @endforeach
             
         </div>
@@ -66,3 +101,5 @@
 
 
 </div>
+
+
