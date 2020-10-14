@@ -20,6 +20,7 @@ class Speedtest extends Model
         'download',
         'ping',
         'result',
+        'duration'
     ];
 
     /**
@@ -32,6 +33,7 @@ class Speedtest extends Model
         'upload' => 'decimal:10',
         'download' => 'decimal:10',
         'ping' => 'decimal:10',
+        'duration' => 'decimal:10',
         'result' => 'array',
     ];
 

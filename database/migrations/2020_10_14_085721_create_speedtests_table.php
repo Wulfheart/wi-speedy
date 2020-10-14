@@ -18,8 +18,9 @@ class CreateSpeedtestsTable extends Migration
             $table->dateTime('tested_at');
             $table->decimal('upload', 64, 10);
             $table->decimal('download', 64, 10);
-            $table->decimal('ping', 64, 10);
+            $table->decimal('ping', 64, 10)->nullable();
             $table->json('result')->nullable();
+            $table->decimal('duration', 64, 10);
             $table->timestamps();
         });
     }

@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use App\Models\Speedtest;
+use App\Speedtest;
 
 class SpeedtestFactory extends Factory
 {
@@ -23,11 +23,12 @@ class SpeedtestFactory extends Factory
     public function definition()
     {
         return [
-            'tested_at' => now()->subHours($this->faker->numberBetween(0, 200)),
-            'download' => $this->faker->randomFloat(10, 0, 150000.0000000000),
-            'upload' => $this->faker->randomFloat(10, 0, 50000.0000000000),
-            'ping' => $this->faker->randomFloat(10, 0, 300.0000000000),
+            'tested_at' => now()->subSeconds($this->faker->numberBetween(0,604800)),
+            'upload' => $this->faker->randomFloat(10, 0, 50000000),
+            'download' => $this->faker->randomFloat(10, 0, 250000000),
+            'ping' => $this->faker->randomFloat(10, 0, 3),
             'result' => '{}',
+            'duration' => $this->faker->randomFloat(10, 10, 30),
         ];
     }
 }

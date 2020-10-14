@@ -22,16 +22,18 @@
             display: none;
         }
     </style>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
 </head>
 <!-- 👀 Nothing to see here, just an empty alpine component  -->
+
 <body class="font-sans antialiased" x-data="{}">
-    <div class="min-h-screen flex flex-col justify-between space-y-10">
+    <div class="flex flex-col justify-between min-h-screen space-y-10">
 
-            {{ $slot }}
-        
+        {{ $slot }}
+
     </div>
-
 
 
     @livewireScripts

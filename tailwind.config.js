@@ -8,6 +8,8 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
             },
+            minWidth:defaultTheme.maxWidth,
+            width: defaultTheme.maxWidth,
         },
         customForms: theme => ({
             default: {
@@ -17,7 +19,7 @@ module.exports = {
                 borderColor: theme('borderColor.transparent'),
                 iconColor: defaultTheme.colors.gray[900],
                
-                icon: iconColor => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10l4 4H8z"/></svg>
+                icon: iconColor => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 14l-4-4h8z"/></svg>
               `,
               }, 
             },

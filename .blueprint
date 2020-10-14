@@ -1,6 +1,6 @@
 created:
     - database/factories/SpeedtestFactory.php
-    - database/migrations/2020_10_13_224722_create_speedtests_table.php
+    - database/migrations/2020_10_14_085721_create_speedtests_table.php
     - app/Speedtest.php
 models:
-    Speedtest: { tested_at: datetime, upload: 'decimal:64,10', download: 'decimal:64,10', ping: 'decimal:64,10', result: 'json nullable' }
+    Speedtest: { tested_at: datetime, upload: 'decimal:64,10', download: 'decimal:64,10', ping: 'decimal:64,10', result: 'json nullable', duration: 'decimal:64,10' }

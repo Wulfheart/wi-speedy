@@ -5,4 +5,5 @@ models:
     download: decimal:64,10
     ping: decimal:64,10
     result: json nullable
+    duration: decimal:64,10
 

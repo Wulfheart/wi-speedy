@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->command('speedy:test')->everyMinute();
         // $schedule->command('inspire')->hourly();
     }
 

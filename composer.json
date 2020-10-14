@@ -10,13 +10,18 @@
     "require": {
         "php": "^7.3",
         "arielmejiadev/larapex-charts": "^1.0",
+        "calebporzio/awesome-helpers": "^2.4",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
+        "geerlingguy/ping": "^1.2",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "livewire/livewire": "^2.2",
-        "raggitech/laravel-readable": "^1.0"
+        "meyfa/php-svg": "^0.10.0",
+        "raggitech/laravel-readable": "^1.0",
+        "symfony/process": "^5.1",
+        "symfony/stopwatch": "^5.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
