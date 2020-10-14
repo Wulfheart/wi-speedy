@@ -6,18 +6,22 @@
         </div>
     </div>
     <!-- Body -->
-    <div class="flex items-center flex-grow w-full h-full overflow-x-auto ">
+    <div class="flex flex-col justify-center flex-grow w-full h-full overflow-x-auto ">
         <div class="flex flex-row items-end h-64 px-12 mx-auto w-6xl">
             @php
             $max = $diagram->entries->max('y');
             @endphp
             @foreach ($diagram->entries as $entry)
-            <div class="flex flex-col-reverse flex-1 h-full sm:bg-gray-200">
+            @php
+                $uuid = (string) Str::uuid();
+            @endphp
+            <div id="{{ $uuid }}" class="flex flex-col-reverse flex-1 h-full sm:bg-gray-200">
                 <div class="" style="height: {{ $entry->y / $max * 100 }}%; background-color: {{ $entry->color }}">
                 </div>
             </div>
             <div class="hidden sm:block" style="margin-left: 1px; margin-right: 1px;"></div>
             @endforeach
+            
         </div>
     </div>
 
